@@ -1,1 +1,1 @@
-# infra-argocd-nodejs
+# infra-fluxcd-nodejs
