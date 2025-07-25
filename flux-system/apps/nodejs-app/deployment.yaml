@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flux-nodejs-app
+  namespace: nodejs-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flux-nodejs-app
+  template:
+    metadata:
+      labels:
+        app: flux-nodejs-app
+    spec:
+      containers:
+        - name: nodejs
+          image: talbitalbi/nodejs-hello-app:v1.0.0
+          ports:
+            - containerPort: 3000
